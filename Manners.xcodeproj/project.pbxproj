@@ -14,6 +14,9 @@
 		79C1FEFF1CC45AFE00B0D4E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C1FEFD1CC45AFE00B0D4E5 /* LaunchScreen.storyboard */; };
 		79C1FF0A1CC45AFE00B0D4E5 /* MannersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF091CC45AFE00B0D4E5 /* MannersTests.swift */; };
 		79C1FF151CC45AFE00B0D4E5 /* MannersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF141CC45AFE00B0D4E5 /* MannersUITests.swift */; };
+		79C1FF231CC45D1A00B0D4E5 /* MannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF221CC45D1A00B0D4E5 /* MannerTableViewCell.swift */; };
+		79C1FF271CC45FF700B0D4E5 /* MannerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */; };
+		79C1FF291CC473AF00B0D4E5 /* Manner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF281CC473AF00B0D4E5 /* Manner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		79C1FF101CC45AFE00B0D4E5 /* MannersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MannersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C1FF141CC45AFE00B0D4E5 /* MannersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MannersUITests.swift; sourceTree = "<group>"; };
 		79C1FF161CC45AFE00B0D4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79C1FF221CC45D1A00B0D4E5 /* MannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MannerTableViewCell.swift; sourceTree = "<group>"; };
+		79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MannerTableViewController.swift; path = ../MannerTableViewController.swift; sourceTree = "<group>"; };
+		79C1FF281CC473AF00B0D4E5 /* Manner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manner.swift; path = ../Manner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 		79C1FEF31CC45AFE00B0D4E5 /* Manners */ = {
 			isa = PBXGroup;
 			children = (
+				79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */,
+				79C1FF281CC473AF00B0D4E5 /* Manner.swift */,
 				79C1FEF41CC45AFE00B0D4E5 /* AppDelegate.swift */,
 				79C1FEF61CC45AFE00B0D4E5 /* ViewController.swift */,
 				79C1FEF81CC45AFE00B0D4E5 /* Main.storyboard */,
+				79C1FF221CC45D1A00B0D4E5 /* MannerTableViewCell.swift */,
 				79C1FEFB1CC45AFE00B0D4E5 /* Assets.xcassets */,
 				79C1FEFD1CC45AFE00B0D4E5 /* LaunchScreen.storyboard */,
 				79C1FF001CC45AFE00B0D4E5 /* Info.plist */,
@@ -257,6 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				79C1FEF71CC45AFE00B0D4E5 /* ViewController.swift in Sources */,
+				79C1FF231CC45D1A00B0D4E5 /* MannerTableViewCell.swift in Sources */,
+				79C1FF291CC473AF00B0D4E5 /* Manner.swift in Sources */,
+				79C1FF271CC45FF700B0D4E5 /* MannerTableViewController.swift in Sources */,
 				79C1FEF51CC45AFE00B0D4E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
