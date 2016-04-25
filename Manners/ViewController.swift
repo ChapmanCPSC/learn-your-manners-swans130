@@ -26,7 +26,6 @@ class ViewController: UIViewController {
         self.descriptionLabel.text = manner.description
         self.mannerImage.image = UIImage(named: manner.pic)
 
-        
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,7 +14,6 @@ class MannerTableViewController: UITableViewController {
     var manners = [Manner]()
     let s = Settings()
     var set : Bool = false;
-    
     var completedManners : String = ""
     
     @IBOutlet weak var emailButton: UIBarButtonItem!
@@ -125,19 +124,19 @@ func mailComposeController(controller: MFMailComposeViewController, didFinishWit
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "settings" {
             segue.destinationViewController as! Settings
+            
         } else {
-        
-        let mannerDetail = segue.destinationViewController as! ViewController
-        if let selectedMannerCell = sender as? MannerTableViewCell {
-            let indexPath = tableView.indexPathForCell(selectedMannerCell)!
-            let selectedManner = manners[indexPath.row]
-            mannerDetail.manner = selectedManner
+            let mannerDetail = segue.destinationViewController as! ViewController
+            if let selectedMannerCell = sender as? MannerTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedMannerCell)!
+                let selectedManner = manners[indexPath.row]
+                mannerDetail.manner = selectedManner
                 
-        }
+            }
         }
     }
-
 
 }

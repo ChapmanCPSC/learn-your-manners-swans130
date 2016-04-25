@@ -9,8 +9,6 @@
 import UIKit
 
 class Settings: UIViewController {
-    
-    var emailStored : Bool = false;
 
     let defaults = NSUserDefaults.standardUserDefaults()
     
@@ -29,12 +27,8 @@ class Settings: UIViewController {
     @IBAction func saveButton(sender: AnyObject) {
        
         defaults.setObject(emailTextField.text!, forKey: "email")
-        print(defaults.objectForKey("email"))
-        emailStored = true;
-        print(emailStored)
         let m = MannerTableViewController()
         m.set = true
-        print("blah \(m.set)")
         navigationController!.popViewControllerAnimated(true)
 
     }
