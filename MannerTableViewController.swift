@@ -7,23 +7,62 @@
 //
 
 import UIKit
+import MessageUI
 
 class MannerTableViewController: UITableViewController {
 
     var manners = [Manner]()
+    let s = Settings()
+    var set : Bool = false;
+    
+    var completedManners : String = ""
+    
+    @IBOutlet weak var emailButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        //clear defaults for testing
+        let appDomain = NSBundle.mainBundle().bundleIdentifier!
+        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
         
         loadManners()
+        
     }
     
+    override func viewDidAppear(animated: Bool) {
+        
+        //if email is set, display button
+        if(s.defaults.objectForKey("email") != nil) {
+            emailButton.enabled = true
+            
+        } else {
+            emailButton.enabled = false
+        }
+    }
+    
+    @IBAction func sendEmail(sender: AnyObject) {
+        
+        let mail = MFMailComposeViewController()
+        
+        if MFMailComposeViewController.canSendMail() {
+            mail.setToRecipients([s.defaults.stringForKey("email")!])
+            mail.setMessageBody("<p>I have viewed \(completedManners)</p>", isHTML: true)
+            mail.setSubject("Progress")
+            presentViewController(mail, animated: true, completion: nil)
+            
+        } else {
+            // show failure alert
+        }
+        
+    }
+
+
+func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+    controller.dismissViewControllerAnimated(true, completion: nil)
+    
+    }
+
     func loadManners() {
         
         let manner1 = Manner(name: "Please", description: "When asking for something, say Please.", pic: "please")
@@ -73,17 +112,22 @@ class MannerTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         let selectedCell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         selectedCell.accessoryType = .Checkmark
-        
+
+        let manner = manners[indexPath.row]
+        completedManners = completedManners + "- \(manner.name)  "
+        print(completedManners)
         
     }
 
 
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "settings" {
+            segue.destinationViewController as! Settings
+        } else {
         
         let mannerDetail = segue.destinationViewController as! ViewController
         if let selectedMannerCell = sender as? MannerTableViewCell {
@@ -91,6 +135,7 @@ class MannerTableViewController: UITableViewController {
             let selectedManner = manners[indexPath.row]
             mannerDetail.manner = selectedManner
                 
+        }
         }
     }
 

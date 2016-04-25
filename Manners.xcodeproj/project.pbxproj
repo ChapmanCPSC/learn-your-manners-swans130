@@ -17,6 +17,7 @@
 		79C1FF231CC45D1A00B0D4E5 /* MannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF221CC45D1A00B0D4E5 /* MannerTableViewCell.swift */; };
 		79C1FF271CC45FF700B0D4E5 /* MannerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */; };
 		79C1FF291CC473AF00B0D4E5 /* Manner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C1FF281CC473AF00B0D4E5 /* Manner.swift */; };
+		79DDF5E71CCD7433007D96D7 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDF5E61CCD7433007D96D7 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		79C1FF221CC45D1A00B0D4E5 /* MannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MannerTableViewCell.swift; sourceTree = "<group>"; };
 		79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MannerTableViewController.swift; path = ../MannerTableViewController.swift; sourceTree = "<group>"; };
 		79C1FF281CC473AF00B0D4E5 /* Manner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Manner.swift; path = ../Manner.swift; sourceTree = "<group>"; };
+		79DDF5E61CCD7433007D96D7 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = ../Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		79C1FEF31CC45AFE00B0D4E5 /* Manners */ = {
 			isa = PBXGroup;
 			children = (
+				79DDF5E61CCD7433007D96D7 /* Settings.swift */,
 				79C1FF261CC45FF700B0D4E5 /* MannerTableViewController.swift */,
 				79C1FF281CC473AF00B0D4E5 /* Manner.swift */,
 				79C1FEF41CC45AFE00B0D4E5 /* AppDelegate.swift */,
@@ -202,6 +205,7 @@
 				TargetAttributes = {
 					79C1FEF01CC45AFE00B0D4E5 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 57YM97NT9R;
 					};
 					79C1FF041CC45AFE00B0D4E5 = {
 						CreatedOnToolsVersion = 7.3;
@@ -265,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79DDF5E71CCD7433007D96D7 /* Settings.swift in Sources */,
 				79C1FEF71CC45AFE00B0D4E5 /* ViewController.swift in Sources */,
 				79C1FF231CC45D1A00B0D4E5 /* MannerTableViewCell.swift in Sources */,
 				79C1FF291CC473AF00B0D4E5 /* Manner.swift in Sources */,
@@ -413,10 +418,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Manners/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaseswanstrom.Manners;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +432,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Manners/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaseswanstrom.Manners;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -496,6 +507,7 @@
 				79C1FF1B1CC45AFE00B0D4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79C1FF1C1CC45AFE00B0D4E5 /* Build configuration list for PBXNativeTarget "MannersTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +516,7 @@
 				79C1FF1E1CC45AFE00B0D4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79C1FF1F1CC45AFE00B0D4E5 /* Build configuration list for PBXNativeTarget "MannersUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +525,7 @@
 				79C1FF211CC45AFE00B0D4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
