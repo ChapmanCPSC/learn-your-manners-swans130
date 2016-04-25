@@ -21,9 +21,9 @@ class MannerTableViewController: UITableViewController, MFMailComposeViewControl
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //clear defaults for testing
-        let appDomain = NSBundle.mainBundle().bundleIdentifier!
-        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+            //clear defaults for testing
+//        let appDomain = NSBundle.mainBundle().bundleIdentifier!
+//        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
         
         loadManners()
         
