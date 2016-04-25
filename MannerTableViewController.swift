@@ -41,7 +41,7 @@ class MannerTableViewController: UITableViewController, MFMailComposeViewControl
     }
     
     @IBAction func sendEmail(sender: AnyObject) {
-
+        
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             
@@ -78,6 +78,7 @@ class MannerTableViewController: UITableViewController, MFMailComposeViewControl
         
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
+
 
     func loadManners() {
         
